@@ -93,7 +93,7 @@ const useGoogleLogin = ({
       window.gapi.load('auth2', () => {
         const GoogleAuth = window.gapi.auth2.getAuthInstance()
         if (!GoogleAuth) {
-          window.gapi.auth2.init(params).then(
+          window.gapi.client.init(params).then(
             res => {
               if (!unmounted) {
                 setLoaded(true)
